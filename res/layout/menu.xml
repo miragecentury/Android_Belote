@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/m_scores"
+          android:title="Scores"
+          android:icon="@drawable/btn_star"
+          android:drawableLeft="@drawable/btn_star">
+    </item>
+
+    <item android:id="@+id/m_quitter"
+          android:title="Quitter"
+          android:icon="@drawable/btn_close"
+          android:drawableLeft="@drawable/btn_close"
+    />
+</menu>
