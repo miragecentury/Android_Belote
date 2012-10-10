@@ -22,7 +22,7 @@ public class MyPlay extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setTitle("Belote v1 - Play");
-        setContentView(R.layout.play);
+        setContentView(R.layout.play2);
         this.belote = new Belote();
 
     }
