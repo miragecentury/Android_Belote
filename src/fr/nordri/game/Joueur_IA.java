@@ -1,5 +1,7 @@
 package fr.nordri.game;
 
+import android.app.Activity;
+
 /**
  * Created with IntelliJ IDEA.
  * User: miragecentury
@@ -8,5 +10,16 @@ package fr.nordri.game;
  * To change this template use File | Settings | File Templates.
  */
 public class Joueur_IA extends Joueur {
+    public Joueur_IA(int ordre, String nom, int equipe) {
+        super(ordre, nom, equipe);
+    }
 
+    @Override
+    public void addCarte(Carte c) {
+        this.main.add(c);
+    }
+
+    public Joueur_IA(int ordre, String nom, int equipe, Activity myBelote) {
+        super(ordre, nom, equipe);
+    }
 }

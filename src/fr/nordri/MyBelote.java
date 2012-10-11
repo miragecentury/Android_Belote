@@ -46,7 +46,8 @@ public class MyBelote extends Activity {
         switch (item.getItemId()) {
             case R.id.m_scores:
                 //lancer
-
+                Intent intent = new Intent(MyBelote.this, MyScores.class);
+                startActivity(intent);
                 return true;
             case R.id.m_quitter:
                 //Pour fermer l'application il suffit de faire finish()
@@ -80,4 +81,6 @@ public class MyBelote extends Activity {
             }
         });
     }
+
+
 }

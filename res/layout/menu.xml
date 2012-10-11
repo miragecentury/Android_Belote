@@ -9,7 +9,7 @@
     </item>
 
     <item android:id="@+id/m_quitter"
-          android:title="Quitter"
+          android:title="Retour"
           android:icon="@drawable/btn_close"
           android:drawableLeft="@drawable/btn_close"
     />
