@@ -131,10 +131,10 @@ public final class R {
         public static final int t_player1=0x7f050007;
         public static final int t_player2=0x7f050008;
         public static final int t_player3=0x7f050009;
-        public static final int tapis1=0x7f05000c;
-        public static final int tapis2=0x7f05000d;
-        public static final int tapis3=0x7f05000e;
-        public static final int tapis4=0x7f05000f;
+        public static final int tapis0=0x7f05000c;
+        public static final int tapis1=0x7f05000d;
+        public static final int tapis2=0x7f05000e;
+        public static final int tapis3=0x7f05000f;
     }
     public static final class layout {
         public static final int main=0x7f030000;

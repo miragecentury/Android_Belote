@@ -113,12 +113,19 @@
             android:layout_row="1"
             >
         <ImageView
-            android:id="@+id/tapis1"
+            android:id="@+id/tapis0"
             android:layout_marginRight="10dp"
             android:layout_height="150dp"
             android:layout_width="80dp"
             android:src="@drawable/c0"
             />
+        <ImageView
+            android:id="@+id/tapis1"
+            android:layout_marginRight="10dp"
+            android:layout_height="150dp"
+            android:layout_width="80dp"
+            android:src="@drawable/c0"
+                />
         <ImageView
             android:id="@+id/tapis2"
             android:layout_marginRight="10dp"
@@ -128,13 +135,6 @@
                 />
         <ImageView
             android:id="@+id/tapis3"
-            android:layout_marginRight="10dp"
-            android:layout_height="150dp"
-            android:layout_width="80dp"
-            android:src="@drawable/c0"
-                />
-        <ImageView
-            android:id="@+id/tapis4"
             android:layout_marginRight="10dp"
             android:layout_height="150dp"
             android:layout_width="80dp"

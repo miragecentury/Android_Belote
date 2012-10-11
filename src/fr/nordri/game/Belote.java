@@ -29,7 +29,11 @@ public class Belote {
     protected ArrayList<Carte> tapis;
     protected ArrayList<Carte> pile;
     protected ArrayList<Carte> pileEquipe0;
+    protected int scoreEquipe0 = 0;
+    protected int scoreRoundEquipe0 = 0;
     protected ArrayList<Carte> pileEquipe1;
+    protected int scoreEquipe1 = 0;
+    protected int scoreRoundEquipe1 = 0;
     protected int nbJoueur = 0;
     protected int nbRound = 0;
     protected int cipher_joueur_atout = 10;
@@ -57,18 +61,37 @@ public class Belote {
         this.pile = this.JeuxCarte;
     }
 
+    /******************************************************************************************************************/
+
     public void addJoueur(Joueur j){
+        j.setBelote(this);
         this.lstJoueur.add(j);
         this.nbJoueur++;
     }
 
+    public ArrayList<Carte> getTapis(){
+        return this.tapis;
+    }
+
+    /******************************************************************************************************************/
+
     public void StartRound(){
+        ImageView view_c;
+        this.cipher_master = 0;
+        this.cipher_question = 0;
+        this.cipher_master = (this.cipher_joueur_distribution + 1) % this.nbJoueur;
         this.cipher_joueur_atout = 10;
         this.cipher_question = 0;
         if(this.nbRound == 0){
             this.cipher_joueur_distribution = 0;
         } else{
             this.cipher_joueur_distribution  = this.nbRound % 4;
+        }
+
+        //ByPass des Clickables
+        for(int i=0; i<8; i++){
+            view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("carte"+i,"id",this.myBelote.getPackageName()));
+            view_c.setClickable(false);
         }
 
         /* Récupération des cartes dans les piles des équipes */
@@ -88,13 +111,27 @@ public class Belote {
 
         // Affiche la première carte de la pile
         Carte c = this.pile.get(0);
-        ImageView view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("pile","id",this.myBelote.getPackageName()));
+        view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("pile","id",this.myBelote.getPackageName()));
         int id_c = this.myBelote.getResources().getIdentifier(this.pile.get(0).getDraw(),"drawable",this.myBelote.getPackageName());
         view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
 
         this.cipher_question = 0;
         this.LaunchQuestionPop();
     }
+
+    //Appelé à la fin du round
+    public void EventEnRound(){
+        this.nbRound++;
+        this.nbRound = this.nbRound % 4;
+        if(false){
+
+        }else{
+            this.myBelote.finish();
+        }
+    }
+
+    /******************************************************************************************************************/
+    //Phase de distribution
 
     //
     public void LaunchQuestionPop(){
@@ -140,6 +177,7 @@ public class Belote {
     public void Prendre(Joueur j,Couleur c){
         this.cipher_joueur_atout = this.lstJoueur.indexOf(j);
         this.atout = c;
+        CarteValeur.setCouleur(c);
         Log.e("Belote","Le Joueur "+ this.cipher_joueur_atout +" Prends");
     }
 
@@ -147,6 +185,7 @@ public class Belote {
     public void Prendre(Joueur j){
         this.cipher_joueur_atout = this.lstJoueur.indexOf(j);
         this.atout = this.pile.get(0).getCouleur();
+        CarteValeur.setCouleur(this.atout);
         Log.e("Belote","Le Joueur "+ this.cipher_joueur_atout +" Prends");
     }
 
@@ -244,7 +283,7 @@ public class Belote {
 
     //
     public void RecepQuestionCoP(){
-        if(this.cipher_question < this.nbJoueur && this.cipher_joueur_atout == 10)
+        if(this.cipher_question != (this.nbJoueur-1) && this.cipher_joueur_atout == 10)
         {
             this.cipher_question++;
             //On continue à poser les questions
@@ -256,12 +295,6 @@ public class Belote {
             this.cipher_question = 0;
             this.EventAllCoP();
         }
-    }
-
-    //Appelé à la fin du round
-    public void EventEnRound(){
-        this.nbRound++;
-        this.nbRound = this.nbRound % 4;
     }
 
     /**
@@ -304,20 +337,97 @@ public class Belote {
         }
     }
 
+    /******************************************************************************************************************/
+
     /**
      * Tous le monde à ces carte
      */
     public void LaunchPlay(){
         //On démarre à jouer
-        this.cipher_master = 0;
-        this.cipher_master = (this.cipher_joueur_distribution + 1) % this.nbJoueur;
+        this.cipher_question = 0;
 
-        Toast.makeText(this.myBelote,"LaunchPlay",Toast.LENGTH_SHORT);
+        this.aToiJouer();
     }
 
-    public void Play(Carte c, Joueur j){
+    public void aToiJouer(){
+        this.lstJoueur.get((this.cipher_master + this.cipher_question)%this.nbJoueur).aToiJouer(this.tapis);
+    }
+
+    public void aJouer(Carte c, Joueur j){
+
+        //Récupère la carte et la place
+        ImageView view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("tapis"+this.cipher_question,"id",this.myBelote.getPackageName()));
+        int id_c = this.myBelote.getResources().getIdentifier(c.getDraw(),"drawable",this.myBelote.getPackageName());
+        view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
+
+        this.tapis.add(c);
+
+
+        // Next ?
+        if(this.cipher_question < (this.nbJoueur-1)){
+            this.cipher_question++;
+            this.aToiJouer();
+        }else{
+            //le dernier à jouer
+            int index_carte = 0;
+            int index_joueur = 0;
+            int score = 0;
+            ArrayList<Carte> pile_gagnant;
+            Carte c_max = this.tapis.get(0);
+            Carte c_tmp = null;
+
+            for(int i = 1; i<this.nbJoueur;i++){
+                c_tmp = this.tapis.get(i);
+                if(c_tmp.getCouleur() != this.atout || c_tmp.getCouleur() == this.tapis.get(0).getCouleur()){
+                    if(c_max.getValeur().getForce(c_max.getCouleur()) < c_tmp.getValeur().getForce(c_tmp.getCouleur())){
+                        c_max = c_tmp;
+                    }
+                }
+            }
+
+            index_carte = this.tapis.indexOf(c_max);
+            index_joueur = (this.cipher_master + index_carte) % this.nbJoueur;
+
+            this.cipher_master = index_joueur;
+
+            if(index_joueur/2 == 0 || index_joueur/2 == 1){
+                pile_gagnant = pileEquipe1;
+            }else{
+                pile_gagnant = pileEquipe0;
+            }
+
+            for(int i = 0; i<4 ; i++){
+                score += this.tapis.get(0).getValeur().getValeur(this.tapis.get(0).getCouleur());
+                pile_gagnant.add(this.tapis.get(0));
+                this.tapis.remove(0);
+            }
+
+            if(index_joueur/2 == 0 || index_joueur/2 == 1){
+                this.pileEquipe1 = pile_gagnant;
+                this.scoreRoundEquipe1+=score;
+            }else{
+                this.pileEquipe0 = pile_gagnant;
+                this.scoreRoundEquipe0+=score;
+            }
+
+            if((this.pileEquipe0.size() + this.pileEquipe1.size()) == 32){
+                //Fin de la partie
+                this.myBelote.finish();
+            }else{
+                //C'est repartie XD
+                for(int i = 0; i<this.nbJoueur;i++){
+                    view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("tapis"+i,"id",this.myBelote.getPackageName()));
+                    id_c = this.myBelote.getResources().getIdentifier("c0","drawable",this.myBelote.getPackageName());
+                    view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
+                }
+                this.LaunchPlay();
+            }
+        }
+
 
     }
+
+    /******************************************************************************************************************/
 
     /**
      * Nettoie la Main du joueur en remettant ces cartes dans la pile
@@ -335,7 +445,7 @@ public class Belote {
 
         if(j.getClass() == Joueur.class && j.getClass() != Joueur_IA.class){
             //Clean Main
-            for(int i = 0; i<13;i++){
+            for(int i = 0; i<8;i++){
                 view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("carte"+i,"id",this.myBelote.getPackageName()));
                 id_c = this.myBelote.getResources().getIdentifier("c0","drawable",this.myBelote.getPackageName());
                 view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
@@ -373,48 +483,9 @@ public class Belote {
 
        for(int i=0;i<cartes.size();i++){
             if(cartes.get(i).getCouleur() != atout){
-                switch (cartes.get(i).getValeur()){
-                    case AS:
-                        score = score + 11;
-                        break;
-                    case DIX:
-                        score = score + 10;
-                        break;
-                    case VALET:
-                        score = score + 2;
-                        break;
-                    case DAME:
-                        score = score + 3;
-                        break;
-                    case ROI:
-                        score = score + 4;
-                        break;
-                    default:
-                        break;
-                }
+                score = score + CarteValeur.getValeurAtout(cartes.get(i).getValeur());
             }else{
-                switch (cartes.get(i).getValeur()){
-                    case AS:
-                        score = score + 11;
-                        break;
-                    case DIX:
-                        score = score + 10;
-                        break;
-                    case VALET:
-                        score = score + 20;
-                        break;
-                    case DAME:
-                        score = score + 3;
-                        break;
-                    case ROI:
-                        score = score + 4;
-                        break;
-                    case NEUF:
-                        score = score + 14;
-                        break;
-                    default:
-                        break;
-                }
+                score = score + CarteValeur.getValeurAtout(cartes.get(i).getValeur());
             }
        }
 
@@ -470,4 +541,9 @@ public class Belote {
         return JeuxMelange;
     }
 
+    /******************************************************************************************************************/
+
+    public Couleur getAtout() {
+        return atout;
+    }
 }
