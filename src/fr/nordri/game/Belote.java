@@ -1,10 +1,12 @@
 package fr.nordri.game;
 
+import android.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.text.LoginFilter;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -31,11 +33,13 @@ public class Belote {
     protected int nbJoueur = 0;
     protected int nbRound = 0;
     protected int cipher_joueur_atout = 10;
+    protected int cipher_master = 0;
     protected int cipher_joueur_distribution;
     protected Couleur atout;
     protected MyPlay myBelote;
 
     public int cipher_question = 0;
+    public int index_question = 0;
 
     /******************************************************************************************************************/
 
@@ -89,62 +93,169 @@ public class Belote {
         view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
 
         this.cipher_question = 0;
-
+        this.LaunchQuestionPop();
     }
 
     //
     public void LaunchQuestionPop(){
         //TODO: clean
+        this.index_question = 0;
+
+        if(this.cipher_joueur_distribution == 0){
+            this.index_question = cipher_question;
+        }else{
+            this.index_question = (cipher_question + this.cipher_joueur_distribution) % this.nbJoueur;
+        }
+
+        Log.e("Belote", "Cipher_Question: "+this.index_question);
+
+        if(this.lstJoueur.get(this.index_question).getType() == "Joueur"){
+            AlertDialog alertDialog;
+            alertDialog = new AlertDialog.Builder(this.myBelote).create();
+            alertDialog.setTitle("Prendre ou Laisser");
+            alertDialog.setMessage("Prendre ou Laisser ?");
+            alertDialog.setButton("Prendre", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Prendre(Belote.this.lstJoueur.get(Belote.this.index_question));
+                    Belote.this.RecepQuestionPoP();
+                    return;
+                } });
+            alertDialog.setButton2("Laisser", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Belote.this.RecepQuestionPoP();
+                    return;
+                }});
+            alertDialog.setCancelable(false);
+            alertDialog.show();
+        }else{
+            //IA
+            Joueur_IA j = (Joueur_IA) this.lstJoueur.get(this.cipher_question);
+            j.QuestionPoP();
+            this.RecepQuestionPoP();
+        }
+
     }
 
     // Prendre en CoP
     public void Prendre(Joueur j,Couleur c){
-
+        this.cipher_joueur_atout = this.lstJoueur.indexOf(j);
+        this.atout = c;
+        Log.e("Belote","Le Joueur "+ this.cipher_joueur_atout +" Prends");
     }
 
     // Prendre en PoP
     public void Prendre(Joueur j){
-
+        this.cipher_joueur_atout = this.lstJoueur.indexOf(j);
+        this.atout = this.pile.get(0).getCouleur();
+        Log.e("Belote","Le Joueur "+ this.cipher_joueur_atout +" Prends");
     }
 
     //
     public void RecepQuestionPoP(){
-        if(this.cipher_question != 4 && this.cipher_joueur_atout == 10)
+        if(this.cipher_question != (this.nbJoueur-1) && this.cipher_joueur_atout == 10)
         {
             this.cipher_question++;
             //On continue à poser les questions
             this.LaunchQuestionPop();
-        }else if(this.cipher_question == 4){
-            this.cipher_question = 0;
-            //Deuxième Passage avec choix
-            this.LaunchQuestionCoP();
+
         }else if(this.cipher_joueur_atout != 10){
             //Efface de la pile (Visuel)
             ImageView view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("pile","id",this.myBelote.getPackageName()));
             int id_c = this.myBelote.getResources().getIdentifier("c0","drawable",this.myBelote.getPackageName());
             view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
 
+            Log.e("Belote", "Nb Carte dans la Pile:"+this.pile.size());
+
             //Donne la carte au joueur qui a pris
             this.lstJoueur.get(this.cipher_joueur_atout).addCarte(this.pile.get(0));
             this.pile.remove(0);
 
-
-            this.donnerCartes(2,true);
-            this.donnerCartes(3);
+            //on donne les cartes
+            this.donnerCartes(3,true);
 
             //Démarre à jouer
-            this.SlotPlay();
+            this.LaunchPlay();
+        }else if(this.cipher_question == (this.nbJoueur-1)){
+            this.cipher_question = 0;
+            //Deuxième Passage avec choix
+            this.LaunchQuestionCoP();
         }
     }
 
     //
     public void LaunchQuestionCoP(){
-        //TODO clean
+        //TODO: clean
+        this.index_question = 0;
+
+        if(this.cipher_joueur_distribution == 0){
+            this.index_question = cipher_question;
+        }else{
+            this.index_question = (cipher_question + this.cipher_joueur_distribution) % this.nbJoueur;
+        }
+
+        Log.e("Belote", "Cipher_Question: "+this.index_question);
+
+        if(this.lstJoueur.get(this.index_question).getType() == "Joueur"){
+            String[] lst = new String[5];
+            lst[0] = "Laisser";
+            lst[1] = "Coeur";
+            lst[2] = "Carreaux";
+            lst[3] = "Pique";
+            lst[4] = "Trèfle";
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.myBelote);
+            builder.setTitle("Prendre une Couleur ou Laisser ?");
+            builder.setItems(lst,new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    switch (i){
+                        case 0:
+                            //Laisser
+                            break;
+                        case 1:
+                            Belote.this.Prendre(Belote.this.lstJoueur.get(Belote.this.index_question),Couleur.COEUR);
+                            break;
+                        case 2:
+                            Belote.this.Prendre(Belote.this.lstJoueur.get(Belote.this.index_question),Couleur.CARREAUX);
+                            break;
+                        case 3:
+                            Belote.this.Prendre(Belote.this.lstJoueur.get(Belote.this.index_question),Couleur.PIQUE);
+                            break;
+                        case 4:
+                            Belote.this.Prendre(Belote.this.lstJoueur.get(Belote.this.index_question),Couleur.TREFLE);
+                            break;
+                    }
+                    Belote.this.RecepQuestionCoP();
+                }
+            });
+            AlertDialog alertDialog = null;
+            alertDialog = builder.create();
+            alertDialog.setCancelable(false);
+            alertDialog.show();
+
+        }else{
+            //IA
+            Joueur_IA j = (Joueur_IA) this.lstJoueur.get(this.cipher_question);
+            j.QuestionCoP();
+            this.RecepQuestionCoP();
+        }
+
     }
 
     //
     public void RecepQuestionCoP(){
+        if(this.cipher_question < this.nbJoueur && this.cipher_joueur_atout == 10)
+        {
+            this.cipher_question++;
+            //On continue à poser les questions
+            this.LaunchQuestionCoP();
 
+        }else if(this.cipher_joueur_atout != 10){
+            this.EventAllCoP();
+        }else if(this.cipher_question == (this.nbJoueur-1)){
+            this.cipher_question = 0;
+            this.EventAllCoP();
+        }
     }
 
     //Appelé à la fin du round
@@ -170,20 +281,38 @@ public class Belote {
             view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
 
             //on redémarre un round
-            this.StartRound();
+            //this.StartRound();
+
+            //this.myBelote.finish();
+            Toast.makeText(this.myBelote,"Restart du Round XD",Toast.LENGTH_SHORT);
+            this.myBelote.finish();
         }else{
-            this.donnerCartes(2,true);
-            this.donnerCartes(3);
-            this.SlotPlay();
+
+            //Efface de la pile (Visuel)
+            ImageView view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("pile","id",this.myBelote.getPackageName()));
+            int id_c = this.myBelote.getResources().getIdentifier("c0","drawable",this.myBelote.getPackageName());
+            view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
+
+
+            //Donne la carte au joueur qui a pris
+            this.lstJoueur.get(this.cipher_joueur_atout).addCarte(this.pile.get(0));
+            this.pile.remove(0);
+
+            this.donnerCartes(3,true);
+
+            this.LaunchPlay();
         }
     }
 
     /**
      * Tous le monde à ces carte
      */
-    public void SlotPlay(){
+    public void LaunchPlay(){
         //On démarre à jouer
+        this.cipher_master = 0;
+        this.cipher_master = (this.cipher_joueur_distribution + 1) % this.nbJoueur;
 
+        Toast.makeText(this.myBelote,"LaunchPlay",Toast.LENGTH_SHORT);
     }
 
     public void Play(Carte c, Joueur j){
@@ -219,13 +348,14 @@ public class Belote {
     }
 
     private void donnerCartes(int nbCarte, boolean atout){
+        Log.e("Belote", "Nb Carte dans la Pile:"+this.pile.size());
         int i = 0;
         while(i < this.nbJoueur)
         {
             for(int j = 0; j < nbCarte; j++){
-                if((j == 0) && atout && this.cipher_joueur_atout == j){
+                if(j == 0 && atout == true && i == this.cipher_joueur_atout){
                    //Pas de Carte XD
-                }   else{
+                }else{
                     if(this.cipher_joueur_distribution != 0){
                         this.lstJoueur.get((i + this.cipher_joueur_distribution) % this.nbJoueur).addCarte(this.pile.get(0));
                     }else{
@@ -303,7 +433,11 @@ public class Belote {
 
         for(Couleur c : Couleur.values()){
             for(CarteValeur v : CarteValeur.values()){
-                if(v == CarteValeur.JOKER){
+                if(
+                        v == CarteValeur.JOKER || v == CarteValeur.DEUX ||
+                        v == CarteValeur.TROIS || v == CarteValeur.QUATTRE ||
+                        v == CarteValeur.CINQ || v == CarteValeur.SIX
+                ){
                     //Pas de JOKER dans la belote XD
                 }else{
                     jeuxCarte.add(new Carte(c, v));

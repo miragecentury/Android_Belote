@@ -10,6 +10,12 @@ import android.app.Activity;
  * To change this template use File | Settings | File Templates.
  */
 public class Joueur_IA extends Joueur {
+
+    @Override
+    public String getType() {
+        return "Joueur_IA";
+    }
+
     public Joueur_IA(int ordre, String nom, int equipe) {
         super(ordre, nom, equipe);
     }
@@ -21,5 +27,13 @@ public class Joueur_IA extends Joueur {
 
     public Joueur_IA(int ordre, String nom, int equipe, Activity myBelote) {
         super(ordre, nom, equipe);
+    }
+
+    public void QuestionPoP(){
+
+    }
+
+    public void QuestionCoP(){
+
     }
 }

@@ -49,6 +49,10 @@ public class Joueur {
     public Couleur rep_couleur;
     /******************************************************************************************************************/
 
+    public String getType(){
+        return "Joueur";
+    }
+
     public Joueur(int ordre, String nom,int equipe){
         this.ordre = ordre;
         this.nom = nom;

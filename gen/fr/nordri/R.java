@@ -112,17 +112,12 @@ public final class R {
     public static final class id {
         public static final int carte0=0x7f050011;
         public static final int carte1=0x7f050012;
-        public static final int carte10=0x7f05001b;
-        public static final int carte11=0x7f05001c;
-        public static final int carte12=0x7f05001d;
         public static final int carte2=0x7f050013;
         public static final int carte3=0x7f050014;
         public static final int carte4=0x7f050015;
         public static final int carte5=0x7f050016;
         public static final int carte6=0x7f050017;
         public static final int carte7=0x7f050018;
-        public static final int carte8=0x7f050019;
-        public static final int carte9=0x7f05001a;
         public static final int gridview=0x7f050005;
         public static final int m_mquitter=0x7f050002;
         public static final int m_mscores=0x7f050001;

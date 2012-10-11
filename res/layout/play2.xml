@@ -259,37 +259,6 @@
                     android:layout_width="80dp"
                     android:src="@drawable/c0"
                     />
-            <ImageView
-                    android:id="@+id/carte8"
-                    android:layout_marginRight="2dp"
-                    android:layout_height="150dp"
-                    android:layout_width="80dp"
-                    android:src="@drawable/c0"
-                    />
-            <ImageView
-                    android:id="@+id/carte9"
-                    android:layout_height="150dp"
-                    android:layout_width="80dp"
-                    android:src="@drawable/c0"
-                    />
-            <ImageView
-                    android:id="@+id/carte10"
-                    android:layout_height="150dp"
-                    android:layout_width="80dp"
-                    android:src="@drawable/c0"
-                    />
-            <ImageView
-                    android:id="@+id/carte11"
-                    android:layout_height="150dp"
-                    android:layout_width="80dp"
-                    android:src="@drawable/c0"
-                    />
-            <ImageView
-                    android:id="@+id/carte12"
-                    android:layout_height="150dp"
-                    android:layout_width="80dp"
-                    android:src="@drawable/c0"
-                    />
         </LinearLayout>
     </LinearLayout>
 
