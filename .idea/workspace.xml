@@ -17,35 +17,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89b3355e-2067-41a7-9f72-c4c77f2571ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/CarteValeur$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur$5.class" />
-      <change type="DELETED" beforePath="C:\Users\Hades\Documents\GitHub\Android_Belote\out\production\Belote\fr\nordri\game\Belote$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Hades\Documents\GitHub\Android_Belote\out\production\Belote\fr\nordri\game\Plateau.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Hades\Documents\GitHub\Android_Belote\src\fr\nordri\game\Plateau.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/Belote.apk.res" afterPath="$PROJECT_DIR$/out/production/Belote/Belote.apk.res" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/Belote.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/Belote/Belote.apk.unaligned" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/Belote.apk" afterPath="$PROJECT_DIR$/out/production/Belote/Belote.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/classes.dex" afterPath="$PROJECT_DIR$/out/production/Belote/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/MyBelote.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/MyBelote.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/R$id.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote$1.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote$2.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote$3.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Belote.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/CarteValeur.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/CarteValeur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur$1.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur_IA.class" afterPath="$PROJECT_DIR$/out/production/Belote/fr/nordri/game/Joueur_IA.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fr/nordri/game/sqLite/MaBaseSQLite.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fr/nordri/game/sqLite/Score.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fr/nordri/game/sqLite/ScoreBDD.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fr/nordri/game/Score.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/fr/nordri/R.java" afterPath="$PROJECT_DIR$/gen/fr/nordri/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/play2.xml" afterPath="$PROJECT_DIR$/res/layout/play2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/scores.xml" afterPath="$PROJECT_DIR$/res/layout/scores.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/nordri/MyScores.java" afterPath="$PROJECT_DIR$/src/fr/nordri/MyScores.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/nordri/game/Belote.java" afterPath="$PROJECT_DIR$/src/fr/nordri/game/Belote.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/nordri/game/CarteValeur.java" afterPath="$PROJECT_DIR$/src/fr/nordri/game/CarteValeur.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/nordri/game/Joueur.java" afterPath="$PROJECT_DIR$/src/fr/nordri/game/Joueur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/nordri/game/Joueur_IA.java" afterPath="$PROJECT_DIR$/src/fr/nordri/game/Joueur_IA.java" />
     </list>
     <ignored path="Belote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +52,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java" line="155" class="fr.nordri.game.Belote$1" package="fr.nordri.game">
+      <breakpoint url="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java" line="154" class="fr.nordri.game.Belote$1" package="fr.nordri.game">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -82,33 +65,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java" line="186" class="fr.nordri.game.Belote" package="fr.nordri.game">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java" line="113" class="fr.nordri.game.Belote" package="fr.nordri.game">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/fr/nordri/game/Joueur.java" line="248" class="fr.nordri.game.Joueur" package="fr.nordri.game">
+      <breakpoint url="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java" line="112" class="fr.nordri.game.Belote" package="fr.nordri.game">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -165,15 +122,16 @@
       <file leaf-file-name="Belote.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="380" column="54" selection-start="14054" selection-end="14054" vertical-scroll-proportion="0.029462738">
+            <state line="365" column="53" selection-start="13576" selection-end="13576" vertical-scroll-proportion="0.48806942">
               <folding>
                 <element signature="docComment;class#Belote#0" expanded="false" />
                 <element signature="method#Belote#0;class#Belote#0" expanded="false" />
                 <element signature="method#addJoueur#0;class#Belote#0" expanded="false" />
                 <element signature="method#getTapis#0;class#Belote#0" expanded="false" />
+                <element signature="method#StartRound#0;class#Belote#0" expanded="false" />
                 <element signature="method#EventEnRound#0;class#Belote#0" expanded="false" />
-                <element signature="method#RecepQuestionPoP#0;class#Belote#0" expanded="false" />
-                <element signature="method#LaunchQuestionCoP#0;class#Belote#0" expanded="false" />
+                <element signature="method#LaunchQuestionPop#0;class#Belote#0" expanded="false" />
+                <element signature="method#Prendre#1;class#Belote#0" expanded="false" />
                 <element signature="method#RecepQuestionCoP#0;class#Belote#0" expanded="false" />
                 <element signature="docComment;method#EventAllCoP#0;class#Belote#0" expanded="false" />
                 <element signature="method#EventAllCoP#0;class#Belote#0" expanded="false" />
@@ -187,16 +145,8 @@
                 <element signature="docComment;method#melangeJeuxCarte#0;class#Belote#0" expanded="false" />
                 <element signature="method#melangeJeuxCarte#0;class#Belote#0" expanded="false" />
                 <element signature="method#getAtout#0;class#Belote#0" expanded="false" />
+                <element signature="method#setAtout#0;class#Belote#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Joueur.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/Joueur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="0" selection-start="8913" selection-end="8913" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -221,21 +171,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/fr/nordri/game/Carte.java" />
-        <option value="$PROJECT_DIR$/src/fr/nordri/game/Plateau.java" />
-        <option value="$PROJECT_DIR$/src/fr/nordri/android/AlertPrendrePasser.java" />
-        <option value="$PROJECT_DIR$/res/layout/alertDialogPasserPrendre.xml" />
-        <option value="$PROJECT_DIR$/res/layout/alertprendrelaisser.xml" />
-        <option value="$PROJECT_DIR$/src/fr/nordri/game/MyAlertPasserPrendre.java" />
         <option value="$PROJECT_DIR$/src/fr/nordri/MyAlertPasserPrendre.java" />
         <option value="$PROJECT_DIR$/src/fr/nordri/MyBelote.java" />
         <option value="$PROJECT_DIR$/src/fr/nordri/MyPlay.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/fr/nordri/game/Joueur_IA.java" />
-        <option value="$PROJECT_DIR$/src/fr/nordri/game/CarteValeur.java" />
         <option value="$PROJECT_DIR$/src/fr/nordri/game/myint.java" />
         <option value="$PROJECT_DIR$/res/layout/play2.xml" />
+        <option value="$PROJECT_DIR$/src/fr/nordri/game/CarteValeur.java" />
         <option value="$PROJECT_DIR$/src/fr/nordri/game/Joueur.java" />
+        <option value="$PROJECT_DIR$/src/fr/nordri/game/sqLite/Score.java" />
+        <option value="$PROJECT_DIR$/src/fr/nordri/game/sqLite/SQLiteOpenHelper.java" />
+        <option value="$PROJECT_DIR$/src/fr/nordri/game/sqLite/MaBaseSQLite.java" />
+        <option value="$PROJECT_DIR$/src/fr/nordri/game/sqLite/ScoreBDD.java" />
+        <option value="$PROJECT_DIR$/res/layout/scores.xml" />
+        <option value="$PROJECT_DIR$/src/fr/nordri/MyScores.java" />
         <option value="$PROJECT_DIR$/src/fr/nordri/game/Belote.java" />
       </list>
     </option>
@@ -247,10 +197,10 @@
     <option name="jreName" value="#JAVA_INTERNAL" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1" />
+    <option name="y" value="27" />
+    <option name="width" value="1442" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -294,26 +244,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Belote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Android 4.0.3 Platform &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Belote" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -332,12 +268,120 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="ProjectPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nordri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nordri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nordri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqLite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Belote" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -359,8 +403,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -370,12 +414,12 @@
       <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="fr.nordri" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res/drawable" />
       <recent name="$PROJECT_DIR$/res/drawable/carte" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.nordri" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Belote">
@@ -424,24 +468,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -467,6 +493,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -593,29 +637,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1" y="27" width="1442" height="874" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.67128986" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32389095" sideWeight="0.6729911" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34854773" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67128986" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39018953" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5035868" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32664436" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441473" sideWeight="0.4913917" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32365146" sideWeight="0.4913917" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.67267686" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39956957" sideWeight="0.67128986" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26189205" sideWeight="0.67335564" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30880713" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26149425" sideWeight="0.69156295" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30843708" sideWeight="0.48852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32389095" sideWeight="0.6729911" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34960273" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16366158" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -701,19 +745,9 @@
         <state line="84" column="0" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.64594126" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/nordri/MyScores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="339" selection-end="339" vertical-scroll-proportion="0.119170986" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/Joueur_IA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="50" selection-start="888" selection-end="888" vertical-scroll-proportion="0.7651123" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/play2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="129" selection-start="4464" selection-end="4464" vertical-scroll-proportion="-0.5767285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/Carte.java">
@@ -723,25 +757,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/CarteValeur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="15" selection-start="862" selection-end="862" vertical-scroll-proportion="0.48397976" />
+        <state line="25" column="28" selection-start="380" selection-end="380" vertical-scroll-proportion="0.2721519">
+          <folding>
+            <element signature="method#setCouleur#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getValeurHorsAtout#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getValeurAtout#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getForceHorsAtout#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getForceAtout#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getForce#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getValeur#0;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getValeurHorsAtout#1;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getValeurAtout#1;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getForceHorsAtout#1;class#CarteValeur#0" expanded="false" />
+            <element signature="method#getForceAtout#1;class#CarteValeur#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="0" selection-start="8913" selection-end="8913" vertical-scroll-proportion="0.0" />
+        <state line="133" column="0" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.097613886">
+          <folding>
+            <element signature="method#aToiJouer#0;class#Joueur#0" expanded="false" />
+            <element signature="method#Choisie#0;class#Joueur#0" expanded="false" />
+            <element signature="method#Jouer#0;class#Joueur#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/sqLite/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="7" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/sqLite/MaBaseSQLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="52" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/play2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="28" selection-start="1247" selection-end="1264" vertical-scroll-proportion="0.47345766">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/nordri/MyScores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="47" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.75949365">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1063#1071#0" expanded="true" />
+            <element signature="e#1287#1295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/sqLite/ScoreBDD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.03164557">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ScoreBDD#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#open#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#close#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#getBDD#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#updateScore#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#removeScoreWithID#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#getScoreWithTitre#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#cursorToScore#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="method#getScores#0;class#ScoreBDD#0" expanded="false" />
+            <element signature="e#3790#3797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scores.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="39" selection-start="273" selection-end="273" vertical-scroll-proportion="0.18987341">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/nordri/game/Belote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="380" column="54" selection-start="14054" selection-end="14054" vertical-scroll-proportion="0.029462738">
+        <state line="365" column="53" selection-start="13576" selection-end="13576" vertical-scroll-proportion="0.48806942">
           <folding>
             <element signature="docComment;class#Belote#0" expanded="false" />
             <element signature="method#Belote#0;class#Belote#0" expanded="false" />
             <element signature="method#addJoueur#0;class#Belote#0" expanded="false" />
             <element signature="method#getTapis#0;class#Belote#0" expanded="false" />
+            <element signature="method#StartRound#0;class#Belote#0" expanded="false" />
             <element signature="method#EventEnRound#0;class#Belote#0" expanded="false" />
-            <element signature="method#RecepQuestionPoP#0;class#Belote#0" expanded="false" />
-            <element signature="method#LaunchQuestionCoP#0;class#Belote#0" expanded="false" />
+            <element signature="method#LaunchQuestionPop#0;class#Belote#0" expanded="false" />
+            <element signature="method#Prendre#1;class#Belote#0" expanded="false" />
             <element signature="method#RecepQuestionCoP#0;class#Belote#0" expanded="false" />
             <element signature="docComment;method#EventAllCoP#0;class#Belote#0" expanded="false" />
             <element signature="method#EventAllCoP#0;class#Belote#0" expanded="false" />
@@ -755,6 +870,7 @@
             <element signature="docComment;method#melangeJeuxCarte#0;class#Belote#0" expanded="false" />
             <element signature="method#melangeJeuxCarte#0;class#Belote#0" expanded="false" />
             <element signature="method#getAtout#0;class#Belote#0" expanded="false" />
+            <element signature="method#setAtout#0;class#Belote#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -139,4 +139,5 @@ public enum CarteValeur{
                 return 26;
         }
     }
+
 }

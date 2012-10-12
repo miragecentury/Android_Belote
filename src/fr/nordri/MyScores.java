@@ -2,9 +2,15 @@ package fr.nordri;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.*;
+import fr.nordri.game.sqLite.Score;
+import fr.nordri.game.sqLite.ScoreBDD;
+
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,6 +26,26 @@ public class MyScores extends Activity {
         super.onCreate(savedInstanceState);
         this.setTitle("Belote v1 - Score");
         setContentView(R.layout.scores);
+
+        ScoreBDD ScoreBdd = new ScoreBDD(this);
+        ScoreBdd.open();
+        ArrayList<Score> scores = ScoreBdd.getScores();
+        ScoreBdd.close();
+
+        ListView lstscores = (ListView)  this.findViewById(this.getResources().getIdentifier("scores","id",this.getPackageName()));
+
+        ArrayList<String> lstString = new ArrayList<String>();
+
+        for(int i = 0; i< scores.size(); i++){
+            lstString.add(scores.get(i).toString());
+            Log.e("Belote","XD"+i);
+        }
+
+        ArrayAdapter<String> lstscoresAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,lstString);
+        lstscores.setAdapter(lstscoresAdapter);
+
+        Toast.makeText(this,"Fin Récupération des Scores",Toast.LENGTH_LONG);
+
     }
 
     //Méthode qui se déclenchera lorsque vous appuierez sur le bouton menu du téléphone

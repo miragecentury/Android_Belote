@@ -1,12 +1,9 @@
 package fr.nordri.game;
 
-import android.R;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.text.LoginFilter;
+import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -14,6 +11,8 @@ import java.util.ArrayList;
 import android.util.Log;
 import android.widget.Toast;
 import fr.nordri.MyPlay;
+import fr.nordri.game.sqLite.Score;
+import fr.nordri.game.sqLite.ScoreBDD;
 
 /**
  * Created with IntelliJ IDEA.
@@ -176,7 +175,7 @@ public class Belote {
     // Prendre en CoP
     public void Prendre(Joueur j,Couleur c){
         this.cipher_joueur_atout = this.lstJoueur.indexOf(j);
-        this.atout = c;
+        this.setAtout(c);
         CarteValeur.setCouleur(c);
         Log.e("Belote","Le Joueur "+ this.cipher_joueur_atout +" Prends");
     }
@@ -184,7 +183,7 @@ public class Belote {
     // Prendre en PoP
     public void Prendre(Joueur j){
         this.cipher_joueur_atout = this.lstJoueur.indexOf(j);
-        this.atout = this.pile.get(0).getCouleur();
+        this.setAtout(this.pile.get(0).getCouleur());
         CarteValeur.setCouleur(this.atout);
         Log.e("Belote","Le Joueur "+ this.cipher_joueur_atout +" Prends");
     }
@@ -412,6 +411,13 @@ public class Belote {
 
             if((this.pileEquipe0.size() + this.pileEquipe1.size()) == 32){
                 //Fin de la partie
+                ScoreBDD scoreBDD = new ScoreBDD(this.myBelote);
+                Score scoreI = new Score();
+                scoreI.setJoueur("Moi");
+                scoreI.setScore("" + this.scoreRoundEquipe1);
+                scoreBDD.open();
+                scoreBDD.insertScore(scoreI);
+                scoreBDD.close();
                 this.myBelote.finish();
             }else{
                 //C'est repartie XD
@@ -545,5 +551,30 @@ public class Belote {
 
     public Couleur getAtout() {
         return atout;
+    }
+
+    public void setAtout(Couleur couleur){
+        this.atout = couleur;
+        int id_c = 0;
+        //Récupère la carte et la place
+        ImageView view_c = (ImageView) this.myBelote.findViewById(this.myBelote.getResources().getIdentifier("atout","id",this.myBelote.getPackageName()));
+        switch (couleur){
+            case COEUR:
+                id_c = this.myBelote.getResources().getIdentifier("co0","drawable",this.myBelote.getPackageName());
+                break;
+            case CARREAUX:
+                id_c = this.myBelote.getResources().getIdentifier("ca0","drawable",this.myBelote.getPackageName());
+                break;
+            case PIQUE:
+                id_c = this.myBelote.getResources().getIdentifier("p0","drawable",this.myBelote.getPackageName());
+                break;
+            case TREFLE:
+                id_c = this.myBelote.getResources().getIdentifier("t0","drawable",this.myBelote.getPackageName());
+                break;
+        }
+        if(id_c != 0){
+            view_c.setImageDrawable(this.myBelote.getResources().getDrawable(id_c));
+            view_c.setVisibility(View.VISIBLE);
+        }
     }
 }

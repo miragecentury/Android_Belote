@@ -110,6 +110,7 @@ public final class R {
         public static final int tq=0x7f020060;
     }
     public static final class id {
+        public static final int atout=0x7f050019;
         public static final int carte0=0x7f050011;
         public static final int carte1=0x7f050012;
         public static final int carte2=0x7f050013;
@@ -127,6 +128,7 @@ public final class R {
         public static final int pile=0x7f050010;
         public static final int scoreEquipe1=0x7f05000a;
         public static final int scoreEquipe2=0x7f05000b;
+        public static final int scores=0x7f05001a;
         public static final int t_player0=0x7f050006;
         public static final int t_player1=0x7f050007;
         public static final int t_player2=0x7f050008;

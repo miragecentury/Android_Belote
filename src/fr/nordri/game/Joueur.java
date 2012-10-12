@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 import fr.nordri.MyPlay;
+import fr.nordri.R;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -236,7 +237,7 @@ public class Joueur {
     public void Choisie(int id){
         //TODO: clean
 
-        int id0 = this.myBelote.getResources().getIdentifier("carte0","id",this.myBelote.getPackageName());
+        int id0 = R.id.carte0;    // ^^
         int id1 = this.myBelote.getResources().getIdentifier("carte1","id",this.myBelote.getPackageName());
         int id2 = this.myBelote.getResources().getIdentifier("carte2","id",this.myBelote.getPackageName());
         int id3 = this.myBelote.getResources().getIdentifier("carte3","id",this.myBelote.getPackageName());
